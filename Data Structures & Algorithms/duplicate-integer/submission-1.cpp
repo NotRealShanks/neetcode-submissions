@@ -1,0 +1,16 @@
+class Solution {
+public:
+    bool hasDuplicate(vector<int>& nums) {
+        std::unordered_set<int> mySet;
+        
+        for (int n : nums) {
+            if (!mySet.contains(n)) {
+                mySet.insert(n);
+            }
+            else {
+                return true;
+            }
+        }
+        return false;
+    }
+};
